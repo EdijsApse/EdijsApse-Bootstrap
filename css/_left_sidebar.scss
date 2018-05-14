@@ -1,0 +1,9 @@
+.left-sidebar{
+    width:98%;
+    margin:0px auto;
+    margin-top:5px;
+    padding: 5px;
+    @include box-shadow();
+    @include all-border-corners(5px);
+    background-color: #FFF;
+}

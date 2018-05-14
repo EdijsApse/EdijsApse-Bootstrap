@@ -1,0 +1,23 @@
+.right-sidebar{
+    width:98%;
+    margin:0px auto;
+    margin-top:5px;
+    @include box-shadow();
+    @include all-border-corners(3px);
+    background-color: #FFF;
+    h3{
+        margin:0;
+        padding: 2%;
+        background-color:$primary-color;
+        @include top-border-corners(3px);
+    }
+    img{
+        display: block;
+        width:75%;
+        margin:0px auto;
+        margin-top:5px;
+        margin-bottom: 5px;
+        @include all-border-corners(5px);
+        @include box-shadow();
+    }
+}

@@ -1,16 +1,17 @@
 .navbar{
-    @include border-corners(5px);
     border:none;
-    margin-top:5px;
+    margin:0px;
+    margin-top:3px;
     .container-fluid{
         padding: 0;
+        margin:0;
         .collapse{
             padding:0;
             ul{
                 width:100%;
                 padding:0;
                 margin:0;
-                @include border-corners(5px);
+                @include top-border-corners(5px);
                 background-color:$secondary_color;
                 .active{
                     &:first-of-type{

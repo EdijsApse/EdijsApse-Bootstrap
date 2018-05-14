@@ -4,29 +4,40 @@ $secondary_color: #fc3f45;
 $primary_font: 'Montserrat', sans-serif;
 $button_font: 'Roboto', sans-serif;
 $info_text_size: 18px;
-@mixin border-corners($radius) {
+@mixin all-border-corners($radius) {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
     -ms-border-radius: $radius;
     border-radius: $radius;
 }
+@mixin top-border-corners($radius) {
+    -webkit-border-radius: $radius $radius 0px 0px;
+    -moz-border-radius: $radius $radius 0px 0px;
+    -ms-border-radius: $radius $radius 0px 0px;
+    border-radius: $radius $radius 0px 0px;
+}
 @mixin border-corners-active-first($radius) {
-    -webkit-border-radius: $radius 0px 0px $radius;
-    -moz-border-radius: $radius 0px 0px $radius;
-    -ms-border-radius: $radius 0px 0px $radius;
-    border-radius: $radius 0px 0px $radius;
+    -webkit-border-top-left-radius: $radius;
+    -moz-border-top-left-radius: $radius;
+    -ms-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
 }
 @mixin border-corners-active-last($radius) {
-    -webkit-border-radius: 0px $radius $radius 0px;
-    -moz-border-radius: 0px $radius $radius 0px;
-    -ms-border-radius: 0px $radius $radius 0px;
-    border-radius: 0px $radius $radius 0px;
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-top-right-radius: $radius;
+    -ms-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
 }
 @mixin animation($time) {
     -webkit-transition: all $time;
     -moz-transition: all $time;
     -ms-transition: all $time;
     transition: all $time;
+}
+@mixin box-shadow() {
+    -webkit-box-shadow: 0px 0px 3px 1px rgba(100, 100, 100, .4);
+    -moz-box-shadow: 0px 0px 3px 1px rgba(100, 100, 100, .4);
+    box-shadow: 0px 0px 3px 1px rgba(100, 100, 100, .4);
 }
 @import 'left_sidebar';
 @import 'right_sidebar';
@@ -35,7 +46,33 @@ body{
     .container-fluid{
         background-color: #fefefe;
         .row{
-            background-color: #000;
+            margin:0;
+            background-color: #f7f7f7;
+            .col-md-3{
+                padding: 5px;
+            }
+            .main{
+                padding:0;
+                margin-top:10px;
+                background-color:#FFF;
+                @include all-border-corners(5px);
+                .section{
+                    background-color:#FFF;
+                    border:2px solid $primary_color;
+                    margin-bottom:5px;
+                    @include all-border-corners(5px);
+                    h2{
+                        background-color:$primary_color;
+                        margin:0;
+                        font-size: 26px;
+                        padding: 1.5%;
+                        @include top-border-corners(3px);
+                    }
+                    p{
+                        margin:8px;
+                    }
+                }
+            }
         }
     }
 }
