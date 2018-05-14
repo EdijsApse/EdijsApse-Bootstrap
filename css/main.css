@@ -1,0 +1,93 @@
+.navbar {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+}
+
+.navbar .container-fluid {
+  padding: 0;
+}
+
+.navbar .container-fluid .collapse {
+  padding: 0;
+}
+
+.navbar .container-fluid .collapse ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #fc3f45;
+}
+
+.navbar .container-fluid .collapse ul .active:first-of-type a {
+  -webkit-border-radius: 5px 0px 0px 5px;
+  -moz-border-radius: 5px 0px 0px 5px;
+  -ms-border-radius: 5px 0px 0px 5px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.navbar .container-fluid .collapse ul .active:last-of-type a {
+  -webkit-border-radius: 0px 5px 5px 0px;
+  -moz-border-radius: 0px 5px 5px 0px;
+  -ms-border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.navbar .container-fluid .collapse ul .active a {
+  background-color: #EA2027;
+}
+
+.navbar .container-fluid .collapse ul li {
+  width: 20%;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .container-fluid .collapse ul li:last-of-type a {
+  -webkit-border-radius: 0px 5px 5px 0px;
+  -moz-border-radius: 0px 5px 5px 0px;
+  -ms-border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.navbar .container-fluid .collapse ul li:first-of-type a {
+  -webkit-border-radius: 5px 0px 0px 5px;
+  -moz-border-radius: 5px 0px 0px 5px;
+  -ms-border-radius: 5px 0px 0px 5px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.navbar .container-fluid .collapse ul li a {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #FFF;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.navbar .container-fluid .collapse ul li a:hover {
+  background-color: #EA2027;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body .container-fluid {
+  background-color: #fefefe;
+}
+
+body .container-fluid .row {
+  background-color: #000;
+}
+/*# sourceMappingURL=main.css.map */
