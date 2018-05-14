@@ -6,4 +6,21 @@
     @include box-shadow();
     @include all-border-corners(5px);
     background-color: #FFF;
+    p{
+        font-size: 20px;
+        font-family: $primary-font;
+    }
+    button{
+        font-size: 18px;
+        font-family: $button_font;
+        background-color: $button_color;
+        border: none;
+        @include box-shadow();
+        @include animation(0.3s);
+        @include all-border-corners(5px);
+        &:hover{
+            background-color: $secondary_color;
+            @include animation(0.3s);
+        }
+    }
 }

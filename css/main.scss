@@ -1,9 +1,8 @@
 $primary_color: #EA2027;
 $secondary_color: #fc3f45;
-
+$button-color:#e51212;
 $primary_font: 'Montserrat', sans-serif;
 $button_font: 'Roboto', sans-serif;
-$info_text_size: 18px;
 @mixin all-border-corners($radius) {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
@@ -43,6 +42,7 @@ $info_text_size: 18px;
 @import 'right_sidebar';
 @import 'menu';
 body{
+    background-color: #dddddd;
     .container-fluid{
         background-color: #fefefe;
         .row{
@@ -54,6 +54,7 @@ body{
             .main{
                 padding:0;
                 margin-top:10px;
+                margin-bottom: 5px;
                 background-color:#FFF;
                 @include all-border-corners(5px);
                 .section{
@@ -61,17 +62,106 @@ body{
                     border:2px solid $primary_color;
                     margin-bottom:5px;
                     @include all-border-corners(5px);
+                    &:last-child{
+                        margin-bottom:0;
+                    }
+                    ul{
+                        margin-left: 20px;
+                        li{
+                            text-align: left;
+                            font-size: 18px;
+                            line-height: 25px;
+                            margin-left: 20px;
+                            list-style-position: inside;
+                            list-style-type: circle;
+                            font-family: $primary_font;
+                        }
+                    }
                     h2{
                         background-color:$primary_color;
+                        font-family: $primary_font;
+                        color:#FFF;
                         margin:0;
-                        font-size: 26px;
+                        font-size: 22px;
                         padding: 1.5%;
                         @include top-border-corners(3px);
                     }
                     p{
                         margin:8px;
+                        text-align: justify;
+                        word-spacing: 1px;
+                        text-indent: 20px;
+                        font-size: 18px;
+                        line-height: 25px;
+                        font-family: $primary_font;
+                    }
+                    .form-horizontal{
+                        margin: 5px;
+                        .form-group{
+                            margin:5px;
+                            label{
+                                font-size:16px;
+                                font-family: $primary_font;
+                                font-weight: normal;
+                                margin-bottom: 0;
+                            }
+                            input{
+                                border:2px solid $primary_color;
+                                font-family: $primary_font;
+                                padding: 5px;
+                                &:focus{
+                                    box-shadow: none;
+                                }
+                            }
+                            select{
+                                font-size: 14px;
+                                font-family: $primary_font;
+                                border:2px solid $primary_color;
+                                &:focus{
+                                    box-shadow: none;
+                                }
+                                option{
+                                    font-size: 18px;
+                                    font-family: $primary_font;
+                                }
+                            }
+                        }
+                        button{
+                            font-size: 18px;
+                            font-family: $button_font;
+                            background-color: $button_color;
+                            border: none;
+                            margin-top:10px;
+                            margin-bottom: 10px;
+                            @include box-shadow();
+                            @include animation(0.3s);
+                            @include all-border-corners(5px);
+                            &:hover{
+                                background-color: $secondary_color;
+                                @include animation(0.3s);
+                            }
+                            &:active{
+                                outline: none;
+                            }
+                        }
                     }
                 }
+            }
+        }
+        .footer{
+            background-color: $primary_color;
+            padding: 0.5%;
+            margin: 0;
+            margin-bottom:5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            p{
+                padding:0;
+                margin: 0;
+                text-align: center;
+                font-size: 16px;
+                font-family: $primary_font;
+                color: #FFF;
             }
         }
     }

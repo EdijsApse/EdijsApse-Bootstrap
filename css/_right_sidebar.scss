@@ -2,14 +2,24 @@
     width:98%;
     margin:0px auto;
     margin-top:5px;
+    padding-bottom: 5px;
     @include box-shadow();
     @include all-border-corners(3px);
     background-color: #FFF;
+    text-align: center;
     h3{
         margin:0;
         padding: 2%;
         background-color:$primary-color;
+        font-family: $primary-font;
+        color:#FFF;
         @include top-border-corners(3px);
+    }
+    p{
+        font-family: $primary-font;
+        font-size:20px;
+        margin:3%;
+        padding: 0;
     }
     img{
         display: block;
@@ -17,7 +27,7 @@
         margin:0px auto;
         margin-top:5px;
         margin-bottom: 5px;
-        @include all-border-corners(5px);
+        @include all-border-corners(10px);
         @include box-shadow();
     }
 }

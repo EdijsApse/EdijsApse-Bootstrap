@@ -8,6 +8,7 @@
         .collapse{
             padding:0;
             ul{
+                height:50px;
                 width:100%;
                 padding:0;
                 margin:0;
@@ -43,7 +44,9 @@
                         }
                     }
                     a{
-                        font-size:$info-text-size;
+                        height: 50px;
+                        line-height: 20px;
+                        font-size:18px;
                         font-family: $primary_font;
                         text-align: center;
                         color:#FFF;
