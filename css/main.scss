@@ -1,7 +1,41 @@
-$primary_color: #4286f4;
-$secondary_color: #72b1ff;
+$primary_color: #EA2027;
+$secondary_color: #fc3f45;
+
 $primary_font: 'Montserrat', sans-serif;
 $button_font: 'Roboto', sans-serif;
+$info_text_size: 18px;
+@mixin border-corners($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin border-corners-active-first($radius) {
+    -webkit-border-radius: $radius 0px 0px $radius;
+    -moz-border-radius: $radius 0px 0px $radius;
+    -ms-border-radius: $radius 0px 0px $radius;
+    border-radius: $radius 0px 0px $radius;
+}
+@mixin border-corners-active-last($radius) {
+    -webkit-border-radius: 0px $radius $radius 0px;
+    -moz-border-radius: 0px $radius $radius 0px;
+    -ms-border-radius: 0px $radius $radius 0px;
+    border-radius: 0px $radius $radius 0px;
+}
+@mixin animation($time) {
+    -webkit-transition: all $time;
+    -moz-transition: all $time;
+    -ms-transition: all $time;
+    transition: all $time;
+}
 @import 'left_sidebar';
 @import 'right_sidebar';
 @import 'menu';
+body{
+    .container-fluid{
+        background-color: #fefefe;
+        .row{
+            background-color: #000;
+        }
+    }
+}
