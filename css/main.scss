@@ -38,10 +38,10 @@ $button_font: 'Roboto', sans-serif;
     -moz-box-shadow: 0px 0px 3px 1px rgba(100, 100, 100, .4);
     box-shadow: 0px 0px 3px 1px rgba(100, 100, 100, .4);
 }
-@import 'media';
 @import 'left_sidebar';
 @import 'right_sidebar';
 @import 'menu';
+@import 'media';
 body{
     background-color: #fefefe;
     .container-fluid{
@@ -59,7 +59,7 @@ body{
                 background-color:#FFF;
                 @include all-border-corners(5px);
                 .section{
-                    display: inline-block;
+                    display: block;
                     background-color:#FFF;
                     border:2px solid $primary_color;
                     margin-bottom:5px;
@@ -71,7 +71,7 @@ body{
                         margin-left: 20px;
                         li{
                             text-align: left;
-                            font-size: 18px;
+                            font-size: 16px;
                             line-height: 25px;
                             margin-left: 20px;
                             list-style-position: inside;
@@ -93,11 +93,12 @@ body{
                         text-align: justify;
                         word-spacing: 1px;
                         text-indent: 20px;
-                        font-size: 18px;
+                        font-size: 16px;
                         line-height: 25px;
                         font-family: $primary_font;
                     }
                     .form-horizontal{
+                        display: block;
                         margin: 5px;
                         .form-group{
                             margin:5px;
@@ -146,7 +147,14 @@ body{
                                 outline: none;
                             }
                         }
-                    }
+                    }     
+                }
+                .project-container{
+                    display: inline-block;
+                    background-color:#FFF;
+                    border:2px solid $primary_color;
+                    margin-bottom:5px;
+                    @include all-border-corners(5px);
                     .project{
                         position: relative;
                         width:48%;
@@ -177,15 +185,10 @@ body{
                             @include all-border-corners(10px);
                             @include box-shadow();                        }
                         }
-                        p{
-                            word-spacing: 1px;
-                            font-size: 18px;
-                        }
                         ul{
                             li{
                                 list-style-type:disc;
                             }
-
                         }
                 }
             }
