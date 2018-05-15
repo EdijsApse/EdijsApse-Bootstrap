@@ -1,10 +1,11 @@
 .navbar{
-    border:none;
     margin:0px;
+    border:none;
     margin-top:3px;
     .container-fluid{
         padding: 0;
         margin:0;
+        @include all-border-corners(5px);
         .collapse{
             padding:0;
             ul{

@@ -1,0 +1,46 @@
+@media only screen and (max-width: 768px){
+    .navbar{
+        @include top-border-corners(5px);
+        background-color: $primary-color;
+        .container-fluid{
+            .navbar-header{
+                @include top-border-corners(5px);
+                background-color:$primary-color;
+                width:100%;
+                margin:0;
+                button{
+                    background-color: $secondary_color;
+                    @include box-shadow();
+                    border:none;
+                    span{
+                        height:3px;
+                        width:24px;
+                    }
+                }
+            }
+            .navbar-collapse{
+                width:100%;
+                margin:0;
+                border:none;
+                ul{
+                    height:auto;
+                    border-radius: 0px;
+                    li{
+                        border-top:1px solid #FFF;
+                        width:100%;
+                        background-color: $secondary_color;
+                        a{
+                            line-height:30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .project{
+        display: block;
+        width: 70% ;
+        margin:0px auto;
+        float:none;
+    }
+}

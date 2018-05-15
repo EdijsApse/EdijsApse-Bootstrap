@@ -38,11 +38,12 @@ $button_font: 'Roboto', sans-serif;
     -moz-box-shadow: 0px 0px 3px 1px rgba(100, 100, 100, .4);
     box-shadow: 0px 0px 3px 1px rgba(100, 100, 100, .4);
 }
+@import 'media';
 @import 'left_sidebar';
 @import 'right_sidebar';
 @import 'menu';
 body{
-    background-color: #dddddd;
+    background-color: #fefefe;
     .container-fluid{
         background-color: #fefefe;
         .row{
@@ -58,6 +59,7 @@ body{
                 background-color:#FFF;
                 @include all-border-corners(5px);
                 .section{
+                    display: inline-block;
                     background-color:#FFF;
                     border:2px solid $primary_color;
                     margin-bottom:5px;
@@ -145,6 +147,46 @@ body{
                             }
                         }
                     }
+                    .project{
+                        position: relative;
+                        width:48%;
+                        margin:1%;
+                        float: left;
+                        border:none;
+                        @include box-shadow();
+                        @include top-border-corners(5px);
+                        padding:0;
+                        h3{
+                            display: block;
+                            font-size:22px;
+                            font-family: $primary_font;
+                            color:#FFF;
+                            text-align: center;
+                            height:auto;
+                            @include top-border-corners(5px);
+                            padding:2%;
+                            margin: 0;
+                            background-color: $secondary_color;
+                        }
+                        img{
+                            display: block;
+                            width:90%;
+                            margin: 0px auto;
+                            margin-top:5px;
+                            margin-bottom: 5px;
+                            @include all-border-corners(10px);
+                            @include box-shadow();                        }
+                        }
+                        p{
+                            word-spacing: 1px;
+                            font-size: 18px;
+                        }
+                        ul{
+                            li{
+                                list-style-type:disc;
+                            }
+
+                        }
                 }
             }
         }
