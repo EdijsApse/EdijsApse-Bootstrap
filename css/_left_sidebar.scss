@@ -22,5 +22,11 @@
             background-color: $secondary_color;
             @include animation(0.3s);
         }
+        &:focus{
+            outline: none !important;
+            border:none;
+            @include box-shadow();
+            background-color: $secondary_color !important;
+        }
     }
 }

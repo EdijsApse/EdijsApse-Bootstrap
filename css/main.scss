@@ -43,9 +43,9 @@ $button_font: 'Roboto', sans-serif;
 @import 'menu';
 @import 'media';
 body{
-    background-color: #fefefe;
+    background-color: #ededed;
     .container-fluid{
-        background-color: #fefefe;
+        background-color: #ededed;
         .row{
             margin:0;
             background-color: #f7f7f7;
@@ -58,6 +58,52 @@ body{
                 margin-bottom: 5px;
                 background-color:#FFF;
                 @include all-border-corners(5px);
+                .galery{
+                    width:100%;
+                    border:2px solid $primary_color;
+                    @include all-border-corners(5px);
+                    margin-bottom:5px;
+                    h2{
+                        background-color:$primary_color;
+                        font-family: $primary_font;
+                        color:#FFF;
+                        margin:0;
+                        font-size: 22px;
+                        padding: 1.5%;
+                        @include top-border-corners(3px);
+                    }
+                    .images{
+                        width:100%;
+                        display:inline-block;
+                        img{
+                            min-height:130px;
+                            height:auto;
+                            width:23%;
+                            margin:1%;
+                            float: left;
+                            @include all-border-corners(10px);
+                            @include box-shadow();
+                        }
+                    }
+                    .video-container{
+                        width:100%;
+                        display: inline-block;
+                        .video{
+                            width:31%;
+                            margin:1%;
+                            float: left;
+                            @include all-border-corners(5px);
+                            @include box-shadow();
+                            cursor: pointer;
+                            @include animation(0.3s);
+                            iframe{
+                                display: block;
+                                width:100%;
+                                border-radius: inherit;
+                            }
+                        }
+                    }
+                }
                 .section{
                     display: block;
                     background-color:#FFF;
@@ -85,6 +131,7 @@ body{
                         color:#FFF;
                         margin:0;
                         font-size: 22px;
+                        text-align:center;
                         padding: 1.5%;
                         @include top-border-corners(3px);
                     }
@@ -96,6 +143,49 @@ body{
                         font-size: 16px;
                         line-height: 25px;
                         font-family: $primary_font;
+                        &.contact{
+                            font-size:20px;
+                            margin:20px 0 20px 20px;
+                            text-align: left;
+                        }
+                    }
+                    .social{
+                        position: relative;
+                        width:95%;
+                        display: table;
+                        @include all-border-corners(5px);
+                        margin:0px auto;
+                        margin-bottom: 5px;
+                        background-color:#FFF;
+                        border:1px solid $secondary_color;
+                        h2{
+                            display:block;
+                            font-size:20px;
+                            font-family:$primary_font;
+                            padding: 2%;
+                            background-color: $secondary_color;
+                            color:#FFF;
+                        }
+                        .social-icon{
+                            position: relative;
+                            display: inline-block;
+                            width:29%;
+                            margin: 2%;
+                            a{
+                                display: block;
+                                height:auto;
+                                img{
+                                    width:100%;
+                                    height:100%;
+                                    filter:blur(3px) grayscale(100%);
+                                    @include animation(0.3s);
+                                }
+                                img:hover{
+                                    filter:blur(0.5px) grayscale(0%);
+                                    @include animation(0.3s);
+                                }
+                            }
+                        }
                     }
                     .form-horizontal{
                         display: block;
@@ -143,7 +233,7 @@ body{
                                 background-color: $secondary_color;
                                 @include animation(0.3s);
                             }
-                            &:active{
+                            &:focus{
                                 outline: none;
                             }
                         }
@@ -201,7 +291,7 @@ body{
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
             p{
-                padding:0;
+                padding:5px;
                 margin: 0;
                 text-align: center;
                 font-size: 16px;
