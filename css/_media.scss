@@ -52,6 +52,7 @@
         margin:1%;
         img{
             width:31% !important;
+            height:200px !important;
         }
     }
     .video-container{
@@ -59,7 +60,12 @@
         margin:1%;
         .video{
             width:48% !important;
+            height:200px !important;
             margin:1% !important;
+            iframe{
+                display: block !important;
+                height: 200px;
+            }
         }
     }
     .social{
@@ -69,6 +75,26 @@
                     filter:blur(0px) grayscale(0%) !important;
                 }
             }
+        }
+    }
+}
+@media only screen and (max-width: 600px){
+    .images{
+        img{
+            width:47% !important;
+        }
+    }
+}
+@media only screen and (max-width: 400px){
+    .images{
+        img{
+            width:96% !important;
+            height: 250px !important;
+        }
+    }
+    .video-container{
+        .video{
+            width:98% !important;
         }
     }
 }
