@@ -6,7 +6,7 @@
         padding: 0;
         margin:0;
         @include all-border-corners(5px);
-        .collapse{
+        .collapse, .in, .navbar-collapse{
             padding:0;
             ul{
                 height:50px;
@@ -27,7 +27,7 @@
                         }
                     }
                     a{
-                        background-color:$primary-color;
+                        background-color:$primary-color !important;
                     }
                 }
                 li{

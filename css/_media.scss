@@ -1,4 +1,4 @@
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 769px){
     .navbar{
         @include top-border-corners(5px);
         background-color: $primary-color;
@@ -38,9 +38,37 @@
         }
     }
     .project{
-        display: block;
-        width: 70% ;
-        margin:0px auto;
-        float:none;
+        display:block !important;
+        width: 90% !important;
+        margin: 0px auto !important;
+        margin-top:5px !important;
+        margin-bottom:5px !important;
+        float:none !important;
+        clear: both;
+    }
+    .images{
+        display:block;
+        width:98%;
+        margin:1%;
+        img{
+            width:31% !important;
+        }
+    }
+    .video-container{
+        width:98% !important;
+        margin:1%;
+        .video{
+            width:48% !important;
+            margin:1% !important;
+        }
+    }
+    .social{
+        .social-icon{
+            a{
+                img{
+                    filter:blur(0px) grayscale(0%) !important;
+                }
+            }
+        }
     }
 }

@@ -37,7 +37,7 @@
 }
 
 .left-sidebar button:hover {
-  background-color: #fc3f45;
+  background-color: #fc3f45 !important;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
@@ -118,11 +118,11 @@
   border-radius: 5px;
 }
 
-.navbar .container-fluid .collapse {
+.navbar .container-fluid .collapse, .navbar .container-fluid .in, .navbar .container-fluid .navbar-collapse {
   padding: 0;
 }
 
-.navbar .container-fluid .collapse ul {
+.navbar .container-fluid .collapse ul, .navbar .container-fluid .in ul, .navbar .container-fluid .navbar-collapse ul {
   height: 50px;
   width: 100%;
   padding: 0;
@@ -134,45 +134,45 @@
   background-color: #fc3f45;
 }
 
-.navbar .container-fluid .collapse ul .active:first-of-type a {
+.navbar .container-fluid .collapse ul .active:first-of-type a, .navbar .container-fluid .in ul .active:first-of-type a, .navbar .container-fluid .navbar-collapse ul .active:first-of-type a {
   -webkit-border-top-left-radius: 5px;
   -moz-border-top-left-radius: 5px;
   -ms-border-top-left-radius: 5px;
   border-top-left-radius: 5px;
 }
 
-.navbar .container-fluid .collapse ul .active:last-of-type a {
+.navbar .container-fluid .collapse ul .active:last-of-type a, .navbar .container-fluid .in ul .active:last-of-type a, .navbar .container-fluid .navbar-collapse ul .active:last-of-type a {
   -webkit-border-top-right-radius: 5px;
   -moz-border-top-right-radius: 5px;
   -ms-border-top-right-radius: 5px;
   border-top-right-radius: 5px;
 }
 
-.navbar .container-fluid .collapse ul .active a {
-  background-color: #EA2027;
+.navbar .container-fluid .collapse ul .active a, .navbar .container-fluid .in ul .active a, .navbar .container-fluid .navbar-collapse ul .active a {
+  background-color: #EA2027 !important;
 }
 
-.navbar .container-fluid .collapse ul li {
+.navbar .container-fluid .collapse ul li, .navbar .container-fluid .in ul li, .navbar .container-fluid .navbar-collapse ul li {
   width: 20%;
   margin: 0;
   padding: 0;
 }
 
-.navbar .container-fluid .collapse ul li:last-of-type a {
+.navbar .container-fluid .collapse ul li:last-of-type a, .navbar .container-fluid .in ul li:last-of-type a, .navbar .container-fluid .navbar-collapse ul li:last-of-type a {
   -webkit-border-top-right-radius: 5px;
   -moz-border-top-right-radius: 5px;
   -ms-border-top-right-radius: 5px;
   border-top-right-radius: 5px;
 }
 
-.navbar .container-fluid .collapse ul li:first-of-type a {
+.navbar .container-fluid .collapse ul li:first-of-type a, .navbar .container-fluid .in ul li:first-of-type a, .navbar .container-fluid .navbar-collapse ul li:first-of-type a {
   -webkit-border-top-left-radius: 5px;
   -moz-border-top-left-radius: 5px;
   -ms-border-top-left-radius: 5px;
   border-top-left-radius: 5px;
 }
 
-.navbar .container-fluid .collapse ul li a {
+.navbar .container-fluid .collapse ul li a, .navbar .container-fluid .in ul li a, .navbar .container-fluid .navbar-collapse ul li a {
   height: 50px;
   line-height: 20px;
   font-size: 18px;
@@ -185,7 +185,7 @@
   transition: all 0.5s;
 }
 
-.navbar .container-fluid .collapse ul li a:hover {
+.navbar .container-fluid .collapse ul li a:hover, .navbar .container-fluid .in ul li a:hover, .navbar .container-fluid .navbar-collapse ul li a:hover {
   background-color: #EA2027;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -193,7 +193,7 @@
   transition: all 0.5s;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
   .navbar {
     -webkit-border-radius: 5px 5px 0px 0px;
     -moz-border-radius: 5px 5px 0px 0px;
@@ -239,10 +239,32 @@
     line-height: 30px;
   }
   .project {
+    display: block !important;
+    width: 90% !important;
+    margin: 0px auto !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    float: none !important;
+    clear: both;
+  }
+  .images {
     display: block;
-    width: 70%;
-    margin: 0px auto;
-    float: none;
+    width: 98%;
+    margin: 1%;
+  }
+  .images img {
+    width: 31% !important;
+  }
+  .video-container {
+    width: 98% !important;
+    margin: 1%;
+  }
+  .video-container .video {
+    width: 48% !important;
+    margin: 1% !important;
+  }
+  .social .social-icon a img {
+    filter: blur(0px) grayscale(0%) !important;
   }
 }
 

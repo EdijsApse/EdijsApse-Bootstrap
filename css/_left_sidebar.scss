@@ -19,7 +19,7 @@
         @include animation(0.3s);
         @include all-border-corners(5px);
         &:hover{
-            background-color: $secondary_color;
+            background-color: $secondary_color !important;
             @include animation(0.3s);
         }
         &:focus{
@@ -27,6 +27,7 @@
             border:none;
             @include box-shadow();
             background-color: $secondary_color !important;
+            //Pirmais Bugs - Nokliko uz pogas, nenostrādā hover out krāsa
         }
     }
 }
