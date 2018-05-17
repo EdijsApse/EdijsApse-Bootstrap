@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed");
+$prime-font: "Barlow Condensed", sans-serif;
+$prime-color: #323232;
+$white-color: #FFFFFF;
+$effect-color:#9f2720;
+@mixin padding_top_bot($top,$bottom){
+    padding: $top, 0px, $bottom, 0px;
+}
+@mixin all-border-corners($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+/* Expected Output
+    padding-top: 7px;
+    padding-bottom: 7px; 
+    font-family: "Barlow Condensed", sans-serif;
+*/
+%padding_fonts{
+    @include padding_top_bot(7px, 7px);
+    font-family: $prime-font;
+}
+%menu_effects{
+    background-color: $effect-color;
+    color: $white-color;
+}
+%text_color{
+    background-color: $prime-color;
+    color:$white-color;
+}
+%btn_effects{
+    color:$white-color;
+    background-color: $prime-color;
+    border:0;
+}
+//v1
+.msg-title-header, .title, .description, .resultTitle, .result, .code, .btn{
+    @extend %padding_fonts;
+}
+//v1 End
+//v2
+.msg-title-header {
+    @extend %padding_fonts;
+}
+.title{
+    @extend %padding_fonts;
+}
+.description{
+    @extend %padding_fonts;
+}
+.resultTitle{
+    @extend %padding_fonts;
+}
+.result{
+    @extend %padding_fonts;
+}
+.code{
+    @extend %padding_fonts;
+}
+.btn{
+    @extend %padding_fonts;
+}
+//v2 End
+.navbar-inverse{
+    background-color:$prime-color;
+    @include all-border-corners(0px);
+    border-style: none;
+    .navbar-nav{
+        /* default text color */ 
+        /* text color and active element background color */
+        >li{ 
+            >a{
+                color: $white-color; 
+                font-family: $prime-font;
+                &:focus, &:hover{
+                    @extend %menu_effects;
+                }
+            }
+        }
+        >.active{
+            >a{
+                @extend %menu_effects;
+                &:focus, &:hover{
+                    @extend %menu_effects;
+                }
+            }
+        }
+    }
+    %colors{
+        background-color: $effect-color;
+        color:$effect-color;
+    }
+    .navbar-toggle{
+        @extend %colors;
+        .icon-bar{
+            background-color: $white-color;
+        }
+        &:hover, &:focus{
+            @extend %colors;
+        }
+    }
+}
+.navbar-brand{
+    padding: 10px;
+    img{
+        max-width: 100px;
+    }
+}
+.title{
+    font-size: 14px;
+    letter-spacing: 12px;
+    text-align:center;
+    @extend %text_color;
+}
+.description{
+    @extend %menu_effects;
+}
+.resultTitle{
+    @extend %text_color;
+}
+.result{
+    background-color: $white-color;
+    color:#000000;
+}
+.code{
+    .btn{
+        background-color: $prime-color;
+    }
+}
+.btn-warning{
+    background-color: $prime-color;
+    border:0;
+    @include all-border-corners(0px);
+    font-family: $prime-font;
+    &:hover, &:focus{
+        @extend %btn_effects;
+    }
+    &:focus{
+        &:active{
+            @extend %btn_effects;
+        }
+    }
+}
+body{
+    margin-top: 80px;
+}
+.row{
+    margin-left: 0; 
+    margin-right: 0;
+}
+p{
+    margin: 0 0 0;//???
+}
+.code{
+    background-color: $effect-color;
+}
+.hideCode{
+    display: none;
+}
+.showCode{
+    display: block;
+}

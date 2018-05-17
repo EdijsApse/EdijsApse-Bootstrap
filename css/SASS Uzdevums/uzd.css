@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed");
+/* Expected Output
+    padding-top: 7px;
+    padding-bottom: 7px; 
+    font-family: "Barlow Condensed", sans-serif;
+*/
+.msg-title-header, .title, .description, .resultTitle, .result, .code, .btn {
+  padding: 7px, 0px, 7px, 0px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover, .description {
+  background-color: #9f2720;
+  color: #FFFFFF;
+}
+
+.title, .resultTitle {
+  background-color: #323232;
+  color: #FFFFFF;
+}
+
+.btn-warning:hover, .btn-warning:focus, .btn-warning:focus:active {
+  color: #FFFFFF;
+  background-color: #323232;
+  border: 0;
+}
+
+.navbar-inverse {
+  background-color: #323232;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+  border-style: none;
+}
+
+.navbar-inverse .navbar-nav {
+  /* default text color */
+  /* text color and active element background color */
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #FFFFFF;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.navbar-inverse .navbar-toggle, .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  background-color: #9f2720;
+  color: #9f2720;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #FFFFFF;
+}
+
+.navbar-brand {
+  padding: 10px;
+}
+
+.navbar-brand img {
+  max-width: 100px;
+}
+
+.title {
+  font-size: 14px;
+  letter-spacing: 12px;
+  text-align: center;
+}
+
+.result {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.code .btn {
+  background-color: #323232;
+}
+
+.btn-warning {
+  background-color: #323232;
+  border: 0;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+body {
+  margin-top: 80px;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+p {
+  margin: 0 0 0;
+}
+
+.code {
+  background-color: #9f2720;
+}
+
+.hideCode {
+  display: none;
+}
+
+.showCode {
+  display: block;
+}
+/*# sourceMappingURL=uzd.css.map */
